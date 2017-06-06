@@ -12,8 +12,20 @@ header {
   line-height: 56px;
   padding-left: 16px;
   background-color: #F44336;
+  text-align: center;
 }
 
 header .fa-chevron-left {
   margin-right: 16px;
+}
+.searchContainer{
+
+}
+input{
+  margin: 0 !important;
+  border: none !important;
+}
+.border-all{
+  border: 1px solid black;
+  border-radius: 8px;
 }
