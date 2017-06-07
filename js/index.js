@@ -13,9 +13,13 @@ const render = (root) => {
          render(root);
        }));
   } else {
-      wrapper.append(mapsDetails( _ => {
-        render(root);
+    wrapper.append(GmapsM( _ => {
+      render(root);
       }));
+    wrapper.append(mapsDetails( _ => {
+      render(root);
+      }));
+
   }
   root.append(wrapper);
 };

@@ -3,9 +3,8 @@
 const mapsDetails = (update) => {
 
   const container = $('<div class="grifoDetail"></div>');
-  const maps = $('<div class="container_mapa"></div>');
+
   const name = $('<h5>'+'Grifo '+state.selectedStation.name +'</h5>');
-  container.append(maps);
   container.append(name);
 
   const products = state.selectedStation.products ;
