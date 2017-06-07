@@ -4,11 +4,13 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header( _ => render(root)));
+  // if (state.selectedStation == null) {
+  //   wrapper.append(Header( _ => render(root)));
+  // } else{
+  //   wrapper.append(Header( _ => render(root)));
+  // }
 
   if (state.selectedStation == null) {
-    // wrapper.append(MovieGrid( _ => {
-    //   render(root);
-    // }));
       wrapper.append(searchMaps( _ => {
          render(root);
        }));

@@ -19,7 +19,13 @@ header .fa-chevron-left {
   margin-right: 16px;
 }
 .searchContainer{
-
+  background-color: #F44336;
+  margin: 0;
+  padding: 0;
+}
+.search{
+  margin:0;
+  margin-top: 10px;
 }
 input{
   margin: 0 !important;
@@ -28,19 +34,34 @@ input{
 .border-all{
   border: 1px solid black;
   border-radius: 8px;
+  background-color: white;
+  margin: 10px;
 }
 .container_mapa{
   border: 1px solid black;
   height: 300px;
   width: 300px;
 }
+.bg-white{
+  background-color: white;
+}
 .lista{
   display: inline-block;
   padding: 5px;
   margin: 5px;
-  background-color: gray;
+  background-color: lightgray;
 }
 .mapsDetail{
-  background-color: gray;
+  background-color: lightgray;
   margin: 5px 0;
+  position: relative;
+  padding: 1%;
+}
+.enlace{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.container_mapa{
+width: 100%;
 }

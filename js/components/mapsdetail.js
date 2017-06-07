@@ -5,7 +5,9 @@ const mapsDetails = (update) => {
   const container = $('<div class="grifoDetail"></div>');
 
   const name = $('<h5>'+'Grifo '+state.selectedStation.name +'</h5>');
+  const address = $('<p>'+'Grifo '+state.selectedStation.address +'</p>');
   container.append(name);
+  container.append(address);
 
   const products = state.selectedStation.products ;
   products.forEach(function(index){
