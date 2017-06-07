@@ -1,26 +1,25 @@
 'use strict';
 
 const mapsDetails = (update) => {
-  // const container = $('<div class="movieDetail"></div>');
-  // const title = $('<h1>'+state.selectedMovie.title+'</h1>');
-  const container = $('<divclass="mapsDetail"></div>');
-  const maps = $('<div></div>');
-  const name = $('<h1>'+'Grifo '+state.selectedMovie.name +'</h1>');
-  const address = $('<h1>'+'Grifo '+state.selectedMovie.address + '</h1>');
-  const district = $('<h1>'+'Grifo '+state.selectedMovie.district + '</h1>');
-  const products = $('<h1>'+'Grifo '+state.selectedMovie.products + '</h1>');
-  const button = $('<button>Regresar</button>') ;
 
-  container.append(button);
-  container.append(products);
-  container.append(district);
-  container.append(address);
-  container.append(name);
+  const container = $('<div class="grifoDetail"></div>');
+  const maps = $('<div class="container_mapa"></div>');
+  const name = $('<h5>'+'Grifo '+state.selectedStation.name +'</h5>');
   container.append(maps);
+  container.append(name);
+
+  const products = state.selectedStation.products ;
+  products.forEach(function(index){
+    const valores  = $('<span class="lista">'+''+ index + '</span>');
+    container.append(valores);
+  });
+
+  const button = $('<button>Regresar</button>') ;
+  container.append(button);
 
   button.on('click',(e) => {
     e.preventDefault();
-    state.selectedMovie = null;
+    state.selectedStation = null;
     update();
   })
 

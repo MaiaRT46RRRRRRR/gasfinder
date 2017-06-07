@@ -29,3 +29,18 @@ input{
   border: 1px solid black;
   border-radius: 8px;
 }
+.container_mapa{
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+}
+.lista{
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  background-color: gray;
+}
+.mapsDetail{
+  background-color: gray;
+  margin: 5px 0;
+}

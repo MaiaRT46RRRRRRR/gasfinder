@@ -1,15 +1,24 @@
 'use strict';
 
-const grifosDetail = (detail) => {
+const grifosDetail = (detail,update) => {
 
   const grifosContainer = $('<div class="mapsDetail"></div>');
 
-  const maps = $('<div></div>');
+  const maps = $('<a  href="#" class="material-icons">location_on</a>');
   const name = $('<h5>'+'Grifo : '+ detail.name +'</h5>');
   const address = $('<h5>'+'Dirección : '+ detail.address + '</h5>');
+  const district = $('<h5>'+'Distrito : '+ detail.district + '</h5>');
+  grifosContainer.append(district);
   grifosContainer.append(address);
   grifosContainer.append(name);
   grifosContainer.append(maps);
+
+  maps.on('click',(e) => {
+    e.preventDefault();
+    state.selectedStation = detail;
+    console.log( detail);
+    update();
+  });
 
   return grifosContainer;
 }
@@ -31,16 +40,20 @@ const searchMaps = (update) => {
     searchContainer.append(divcont);
 
     input.on('keyup',(e) => {
-      reRender(container_grifos);
-      const filtrados = filterByDistrict(state.stations ,input.val());
-      filtrados.forEach( function( index, value ) {
-      container_grifos.append(grifosDetail(index));
-
+        if(input.val() !=""){
+            reRender(container_grifos);
+            const filtrados = filterByDistrict(state.stations ,input.val());
+            if (filtrados.length == 0) {
+              alert("No existe ningun grifo con ese nombre");
+            }else {
+              filtrados.forEach( function( index, value ) {
+                container_grifos.append(grifosDetail(index,update));
+              });
+             }
+            searchContainer.append(container_grifos);
+          }else {
+            reRender(container_grifos);
+          }
     });
-    searchContainer.append(container_grifos);
-
-    });
-
-
   return searchContainer;
 }
