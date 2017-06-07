@@ -29,14 +29,17 @@ const reRender = (item)=>{
 
 const searchMaps = (update) => {
   const searchContainer = $('<div class=" row searchContainer"></div>');
-  const divcont =$('<div class="border-all col s12 xll2"></div>')
-  const input = $('<input type="text" class="col s11 xl11" placeholder="Ingrese tu direccion a buscar"></p>');
+  const divcont =$('<div class="border-all  col s10 xl10"></div>')
+  const relleno =$('<div class="col s1 xl1"></div>')
+  const input = $('<input type="text" class="col s9 xl9" placeholder="Ingrese tu direccion a buscar"></p>');
   const icon =$('<i class="col s1 xl1 material-icons search">search</i>')
   const container_grifos =$('<div class=" col s12  xl12 bg-white"></div>')
     divcont.append(icon);
     divcont.append(input);
-    searchContainer.append(container_grifos);
+    searchContainer.append(relleno);
     searchContainer.append(divcont);
+    searchContainer.append(container_grifos);
+
 
     input.on('keyup',(e) => {
         if(input.val() !=""){
