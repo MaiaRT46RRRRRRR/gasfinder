@@ -16,14 +16,5 @@ const mapsDetails = (update) => {
     container.append(valores);
   });
 
-  const button = $('<br><button>Regresar</button>') ;
-  container.append(button);
-
-  button.on('click',(e) => {
-    e.preventDefault();
-    state.selectedStation = null;
-    update();
-  })
-
   return container;
 }

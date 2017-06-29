@@ -1,6 +1,6 @@
 'use strict';
 
-const filterByDistrict = (stations,query) => {
+const filterByDistrict= (stations,query) => {
   const select =stations.filter (function(index) {
     return (index.district.toLowerCase().indexOf(query.toLowerCase())!=-1);
 

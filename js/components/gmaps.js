@@ -13,9 +13,7 @@ const GmapsM = (update)=>{
         click: function(e) {
           alert('click');
         },
-          // dragend: function(e) {
-          //   alert('dragend');
-          // }
+
       });
 
       GMaps.geolocate({
@@ -26,18 +24,14 @@ const GmapsM = (update)=>{
               lng: position.coords.longitude,
               title: 'Estas aqui',
             });
-            // map.travelRoute({
-            //   origin: [position.coords.latitude, position.coords.longitude],
-            //   destination: [state.selectedStation.lat, state.selectedStation.long],
-            //   travelMode: 'driving',
-            // });
+
             map.drawRoute({
               origin: [position.coords.latitude, position.coords.longitude],
               destination: [state.selectedStation.lat,state.selectedStation.long],
               travelMode: 'driving',
               strokeColor: '#131540',
               strokeOpacity: 0.6,
-              strokeWeight: 6
+              strokeWeight: 3
             });
 
           },
