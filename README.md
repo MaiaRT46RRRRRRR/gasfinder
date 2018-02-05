@@ -4,6 +4,9 @@
 
 GasFinder es una aplicación que permite ubicar estaciones de servicios (Primax, Pecsa, etc) en base al distrito ingresado en su buscador.
 
+![gas](https://user-images.githubusercontent.com/25912510/35811949-b9dddcb2-0a5d-11e8-9243-e6aa29c07b6a.png)
+
+
 La aplicación consta de 2 pantallas:
 
 1. La primera pantalla permite realizar la búsqueda de las estaciones de servicio en tiempo real. El sistema debe
